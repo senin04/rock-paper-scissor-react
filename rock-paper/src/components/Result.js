@@ -7,8 +7,6 @@ const Container = styled.div`
   margin: 0 40px;
   margin-top: 80px;
   display: ${(props) => (props.isVisible === true ? "flex" : "none")};
-  /* opacity: ${(props) => (props.isVisible === true ? 1 : 0)}; */
-  /* transition: 0.9s ease-in-out; */
 
   animation: test 0.2s ease-in-out;
 
@@ -24,6 +22,7 @@ const Container = styled.div`
   @media (max-width: 900px) {
     position: absolute;
     transform: translateY(150%);
+    animation: none;
   }
 `;
 

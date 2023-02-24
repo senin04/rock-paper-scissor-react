@@ -1,5 +1,6 @@
-import styled from "styled-components";
 import Choosen from "./Choosen";
+import styled from "styled-components";
+
 const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
@@ -18,9 +19,13 @@ const StyledText = styled.h2`
   margin-bottom: 50px;
 
   @media (max-width: 900px) {
-    font-size: 10px;
+    font-size: 14px;
     margin-top: 30px;
     margin-bottom: 0;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 11px;
   }
 `;
 
@@ -36,7 +41,6 @@ const StyledCircleDiv = styled.div`
     height: 120px;
   }
 `;
-
 const StyledCircle = styled.div`
   width: 180px;
   height: 180px;
@@ -50,12 +54,12 @@ const StyledCircle = styled.div`
   }
 `;
 
-const ChoosenComputer = ({ isBig, choice, isVisible, computerWin }) => {
+const ChoosenContainer = ({ isBig, choice, win, text, isVisible }) => {
   return (
     <StyledDiv>
-      <StyledText>THE HOUSE PICKED</StyledText>
+      <StyledText>{text}</StyledText>
       {isVisible ? (
-        <Choosen isBig={isBig} choice={choice} winner={computerWin} />
+        <Choosen isBig={isBig} choice={choice} winner={win} />
       ) : (
         <StyledCircleDiv>
           <StyledCircle></StyledCircle>
@@ -65,4 +69,4 @@ const ChoosenComputer = ({ isBig, choice, isVisible, computerWin }) => {
   );
 };
 
-export default ChoosenComputer;
+export default ChoosenContainer;

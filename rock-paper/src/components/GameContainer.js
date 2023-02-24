@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import TriangleContainer from "./TriangleContainer";
 import styled from "styled-components";
-import ChoosenHuman from "./ChoosenHuman";
 import Result from "./Result";
-import ChoosenComputer from "./ChoosenComputer";
+import ChoosenContainer from "./ChoosenContainer";
 
 const StyledGameDiv = styled.div`
   display: flex;
@@ -40,6 +39,7 @@ const GameContainer = ({ onUpdateScore }) => {
   const handlePlayAgain = () => {
     setPlayerChoice(null);
     setHumanWin(false)
+    setComputerWin(false)
   };
 
   const chooseWinner = () => {
@@ -79,14 +79,14 @@ const GameContainer = ({ onUpdateScore }) => {
   } else {
     return (
       <StyledGameDiv>
-        <ChoosenHuman humanWin={humanWin} isBig={isBig} choice={playerChoice} />
+        <ChoosenContainer text={"YOU PICKED"} win={humanWin} isBig={isBig} choice={playerChoice} isVisible={true} />
         <Result result={result} onPlayAgain={handlePlayAgain} />
-        {/* toto som tu mal ako jednu triedu choosenDiv aby to nebolo zduplikovaný kód ale nefungovalo mi tam isVisible len na toto jedno ale na obidve */}
-        <ChoosenComputer
+        <ChoosenContainer
+        text={"THE HOUSE PICKED"}
           isVisible={isVisible}
           isBig={isBig}
           choice={computerChoice}
-          computerWin={computerWin}
+          win={computerWin}
         />
       </StyledGameDiv>
     );
