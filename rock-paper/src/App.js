@@ -4,7 +4,6 @@ import styled from "styled-components";
 import Rules from "./components/Rules";
 import TopContainer from "./components/TopContainer";
 import GameContainer from "./components/GameContainer";
-import ChoosenHuman from "./components/ChoosenHuman";
 
 const BodyContainer = styled.div`
   height: 100vh;

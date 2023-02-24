@@ -39,6 +39,7 @@ const GameContainer = ({ onUpdateScore }) => {
 
   const handlePlayAgain = () => {
     setPlayerChoice(null);
+    setHumanWin(false)
   };
 
   const chooseWinner = () => {

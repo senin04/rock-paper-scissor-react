@@ -7,13 +7,15 @@ import Stone from "./Stone";
 const Container = styled.div`
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
   margin: 0 auto;
   margin-top: 150px;
   max-width: 430px;
+  min-height: 280px;
 
   @media (max-width: 900px) {
+    min-height: auto;
+
     .triangle {
       height: 200px;
     }

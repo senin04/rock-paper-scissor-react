@@ -11,6 +11,7 @@ const Button = styled.button`
   background: linear-gradient(white, white) padding-box,
     linear-gradient(to top, hsl(349, 71%, 52%), hsl(349, 70%, 56%)) border-box;
   /* box-shadow: inset 0px 8px #ced2e7, 0 8px #8D142A; */
+  transition: box-shadow 0.5s ease-in-out;
   box-shadow: ${(props) =>
     props.winner
       ? "inset 0px 8px #ced2e7, 0 8px #8D142A, 0 0 0 50px hsl(217, 16%, 45%, 0.15), 0 0 0 100px hsl(217, 16%, 45%, 0.10), 0 0 0 150px hsl(217, 16%, 45%, 0.05)"

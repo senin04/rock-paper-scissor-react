@@ -10,7 +10,8 @@ export const Button = styled.button`
   border-radius: 50%;
   background: linear-gradient(white, white) padding-box,
     linear-gradient(to top, hsl(230, 89%, 62%), hsl(230, 89%, 65%)) border-box;
-  transition: box-shadow 0.2s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
+  
 
   box-shadow: ${(props) =>
     props.winner
