@@ -1,5 +1,6 @@
-import Choosen from "./Choosen";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
+import PlayedHand from "./PlayedHand";
 
 const StyledDiv = styled.div`
   display: flex;
@@ -59,7 +60,7 @@ const ChoosenContainer = ({ isBig, choice, win, text, isVisible }) => {
     <StyledDiv>
       <StyledText>{text}</StyledText>
       {isVisible ? (
-        <Choosen isBig={isBig} choice={choice} winner={win} />
+        <PlayedHand isBig={isBig} type={choice} winner={win} />
       ) : (
         <StyledCircleDiv>
           <StyledCircle></StyledCircle>

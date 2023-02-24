@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Paper from "./Paper";
-import Scissors from "./Scissors";
-import Stone from "./Stone";
+import PlayedHand from "./PlayedHand"
 
 const Container = styled.div`
   position: relative;
@@ -59,14 +57,14 @@ const TriangleContainer = ({ onPlayerChoice }) => {
   return (
     <Container>
       <img className="triangle" src="images/bg-triangle.svg" alt="" />
-      <PaperPosition onClick={() => onPlayerChoice("Paper")}>
-        <Paper />
+      <PaperPosition onClick={() => onPlayerChoice("paper")}>
+        <PlayedHand type={"paper"}/>
       </PaperPosition>
-      <ScissorsPosition onClick={() => onPlayerChoice("Scissors")}>
-        <Scissors />
+      <ScissorsPosition onClick={() => onPlayerChoice("scissors")}>
+        <PlayedHand type={"scissors"}/>
       </ScissorsPosition>
-      <StonePossition onClick={() => onPlayerChoice("Stone")}>
-        <Stone />
+      <StonePossition onClick={() => onPlayerChoice("rock")}>
+        <PlayedHand type={"rock"}/>
       </StonePossition>
     </Container>
   );

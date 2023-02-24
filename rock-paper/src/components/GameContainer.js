@@ -15,7 +15,7 @@ const StyledGameDiv = styled.div`
 `;
 
 const GameContainer = ({ onUpdateScore }) => {
-  const choices = ["Stone", "Paper", "Scissors"];
+  const choices = ["rock", "paper", "scissors"];
   const [playerChoice, setPlayerChoice] = useState(null);
   const [computerChoice, setComputerChoice] = useState(null);
   const [isBig, setIsBig] = useState(false);
@@ -48,9 +48,9 @@ const GameContainer = ({ onUpdateScore }) => {
     if (playerChoice === computerChoice) {
       setResult("DRAW");
     } else if (
-      (playerChoice === "Stone" && computerChoice === "Scissors") ||
-      (playerChoice === "Paper" && computerChoice === "Stone") ||
-      (playerChoice === "Scissors" && computerChoice === "Paper")
+      (playerChoice === "rock" && computerChoice === "scissors") ||
+      (playerChoice === "paper" && computerChoice === "rock") ||
+      (playerChoice === "scissors" && computerChoice === "paper")
     ) {
       setResult("YOU WIN");
       onUpdateScore(1);
