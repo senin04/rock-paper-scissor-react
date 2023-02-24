@@ -38,8 +38,8 @@ const GameContainer = ({ onUpdateScore }) => {
 
   const handlePlayAgain = () => {
     setPlayerChoice(null);
-    setHumanWin(false)
-    setComputerWin(false)
+    setHumanWin(false);
+    setComputerWin(false);
   };
 
   const chooseWinner = () => {
@@ -79,10 +79,16 @@ const GameContainer = ({ onUpdateScore }) => {
   } else {
     return (
       <StyledGameDiv>
-        <ChoosenContainer text={"YOU PICKED"} win={humanWin} isBig={isBig} choice={playerChoice} isVisible={true} />
+        <ChoosenContainer
+          text={"YOU PICKED"}
+          win={humanWin}
+          isBig={isBig}
+          choice={playerChoice}
+          isVisible={true}
+        />
         <Result result={result} onPlayAgain={handlePlayAgain} />
         <ChoosenContainer
-        text={"THE HOUSE PICKED"}
+          text={"THE HOUSE PICKED"}
           isVisible={isVisible}
           isBig={isBig}
           choice={computerChoice}
